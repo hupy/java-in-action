@@ -2,6 +2,8 @@ java学习
 
 # nio学习
 
+![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180227-084502.jpg)
+
 - 参考《并发编程网》：http://ifeve.com/java-nio-all/
 
 # 网络模型
@@ -11,6 +13,8 @@ java学习
 - 5种网络IO模型（有图，很清楚）：https://www.cnblogs.com/findumars/p/6361627.html
 
 # netty学习
+
+![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180227-084552.jpg)
 
 - 参考书籍：《netty实战》
 - 参考应用：spark
