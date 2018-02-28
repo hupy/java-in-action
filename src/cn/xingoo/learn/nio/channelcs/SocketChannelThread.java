@@ -1,4 +1,4 @@
-package cn.xingoo.learn.nio.example;
+package cn.xingoo.learn.nio.channelcs;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
