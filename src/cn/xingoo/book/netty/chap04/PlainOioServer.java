@@ -8,7 +8,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class PlainOioServer {
-
     public void serve(int port) throws IOException {
         // 开启Socket服务器，并监听端口
         final ServerSocket socket = new ServerSocket(port);
@@ -39,10 +38,8 @@ public class PlainOioServer {
             e.printStackTrace();
         }
     }
-
     public static void main(String[] args) throws IOException {
         PlainOioServer server = new PlainOioServer();
         server.serve(5555);
     }
-
 }

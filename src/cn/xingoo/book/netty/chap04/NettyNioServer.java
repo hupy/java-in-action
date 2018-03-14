@@ -14,11 +14,15 @@ import java.nio.charset.Charset;
 public class NettyNioServer {
     public void serve(int port) throws InterruptedException {
         final ByteBuf buffer = Unpooled.unreleasableBuffer(Unpooled.copiedBuffer("Hi\r\n", Charset.forName("UTF-8")));
-        EventLoopGroup group = new NioEventLoopGroup();
+
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+        EventLoopGroup workerGroup = new NioEventLoopGroup();
+
         try{
             ServerBootstrap b = new ServerBootstrap();
-            b.group(group)
+            b.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
+                    .handler(new SimpleServerHandler())
                     .localAddress(new InetSocketAddress(port))
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
@@ -34,12 +38,30 @@ public class NettyNioServer {
             ChannelFuture f = b.bind().sync();
             f.channel().closeFuture().sync();
         } finally {
-            group.shutdownGracefully().sync();
+            bossGroup.shutdownGracefully().sync();
+            workerGroup.shutdownGracefully().sync();
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
         NettyNioServer server = new NettyNioServer();
         server.serve(5555);
+    }
+
+    private static class SimpleServerHandler extends ChannelInboundHandlerAdapter {
+        @Override
+        public void channelActive(ChannelHandlerContext ctx) throws Exception {
+            System.out.println("channelActive");
+        }
+
+        @Override
+        public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+            System.out.println("channelRegistered");
+        }
+
+        @Override
+        public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+            System.out.println("handlerAdded");
+        }
     }
 }
