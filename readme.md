@@ -40,8 +40,12 @@ nio是新的io包 non-blocking IO，主要提供了channels和buffer，非阻塞
 
 # netty学习
 
+## 《Netty实战》
+
 ![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180227-084552.jpg)
 
-- 参考书籍：《netty实战》
-- 参考应用：spark
+## 《Netty权威指南》
+
+![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180315-082645.jpg)
+
 
