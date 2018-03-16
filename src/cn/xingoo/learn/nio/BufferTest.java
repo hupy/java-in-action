@@ -9,6 +9,8 @@ import java.nio.channels.FileChannel;
  * capacity buffer的容量
  * position 操作的位置，写入的位置以及读取的位置
  * limit 写模式下，为最多写入的量；读模式下，为当前position
+ * mask标记，reset恢复标记
+ * <a href="https://www.cnblogs.com/niejunlei/p/5994130.html">图片参考</a>
  */
 public class BufferTest {
     public static void main(String[] args) throws IOException {

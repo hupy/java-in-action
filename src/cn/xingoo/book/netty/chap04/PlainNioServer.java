@@ -32,6 +32,7 @@ public class PlainNioServer {
         for(;;){
             try{
                 selector.select();
+
             }catch (IOException e){
                 e.printStackTrace();
                 break;

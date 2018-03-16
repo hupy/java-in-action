@@ -15,6 +15,11 @@ public class PlainOioServer {
             for(;;){
                 // 轮训接收监听
                 final Socket clientSocket = socket.accept();
+                try {
+                    Thread.sleep(500000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("accepted connection from "+clientSocket);
                 // 创建新线程处理请求
                 new Thread(()->{
