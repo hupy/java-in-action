@@ -29,8 +29,8 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf buf = (ByteBuf) msg;
-        System.out.println("Now is : "+buf.toString(Charset.forName("UTF-8"))+" ; the counter : " + ++counter);
+        String buf = (String) msg;
+        System.out.println("Now is : "+buf+" ; the counter : " + ++counter);
     }
 
     @Override
