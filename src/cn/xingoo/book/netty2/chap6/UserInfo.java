@@ -45,6 +45,7 @@ public class UserInfo implements Serializable {
         info.userID = 1;
         info.userName = "lisi";
 
+        // 测试java序列化占用的空间
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream os = new ObjectOutputStream(bos);
         os.writeObject(info);
@@ -55,8 +56,30 @@ public class UserInfo implements Serializable {
         System.out.println(b.length);
         bos.close();
 
+        // 测试自定义序列化占用的空间
         System.out.println("------");
         System.out.println(info.codec().length);
+
+        // 测试Java序列化的时间
+        long startTime = System.currentTimeMillis();
+        for(int i=0; i< 1000000; i++){
+            bos = new ByteArrayOutputStream();
+            os = new ObjectOutputStream(bos);
+            os.writeObject(info);
+            os.flush();
+            os.close();
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println(endTime-startTime);
+
+        // 测试自定义的时间
+        startTime = System.currentTimeMillis();
+        for(int i=0;i<1000000;i++){
+            byte[] bbb = info.codec();
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println(endTime-startTime);
+
 
     }
 }
