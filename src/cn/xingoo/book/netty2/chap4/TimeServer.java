@@ -39,7 +39,7 @@ public class TimeServer {
         @Override
         protected void initChannel(SocketChannel ch) throws Exception {
             // 有TCP粘包问题
-//            ch.pipeline().addLast(new TimeServerHandler());
+            //ch.pipeline().addLast(new TimeServerHandler());
 
             // 没有粘包问题
             ch.pipeline().addLast(new LineBasedFrameDecoder(1024));

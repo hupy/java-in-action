@@ -72,7 +72,7 @@ public class NettyNioServerHandlerTest {
         public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
             ByteBuf buf = (ByteBuf)msg;
             System.out.println("InboundB read"+buf.toString(Charset.forName("UTF-8")));
-            super.channelRead(ctx, msg);
+            //super.channelRead(ctx, msg);
             // 从pipeline的尾巴开始找outbound
             ctx.channel().writeAndFlush(buffer);
         }
