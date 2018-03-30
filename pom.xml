@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>JDK-Learning</groupId>
-  <artifactId>JDK-Learning</artifactId>
+  <groupId>java-in-action</groupId>
+  <artifactId>java-in-action</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <packaging>war</packaging>
@@ -32,7 +32,12 @@
       <artifactId>lucene-core</artifactId>
       <version>6.2.0</version>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>3.4.11</version>
+    </dependency>
   </dependencies>
 
   <build>

@@ -1,51 +1,29 @@
+> 记录Java相关的学习内容
 
-学习参考
-![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180227-084502.jpg)
+包内容说明：
 
-# io学习
+- [cn.xingoo.book：读书的代码实践]()
+- [cn.xingoo.jdk：jdk基础以及源码测试]()
 
-io流是Java中最基本的数据读取和输出的工具方法，有字节流和字符流两种，即读取和写入的单位一个是字节，一个字符。
-在程序中字符往往跟编码有关，有的字符对应的了几个字节不等，因此选择适合的方法要看操作的存储媒介内容是什么、属于什么编码。
+# 书籍阅读
 
-除了各种各样的流之外，特别需要注意的是
+#### Netty
 
-- PipedInputStream可以用来在多线程之间交换数据；
-- RandomAccessFile可以实现文件的随机读写；
-- 尽量使用IOUils操作吧，原生的API不太友好
+总结了四篇文章：
 
-![](https://github.com/xinghalo/JDK-Learning/blob/master/img/IO流的关系图.png)
+1. [网络IO的基本知识与概念](http://www.cnblogs.com/xing901022/p/8659436.html)
+2. [普通IO以及BIO服务器](http://www.cnblogs.com/xing901022/p/8666147.html)
+3. [NIO的使用与服务器Hello world](http://www.cnblogs.com/xing901022/p/8672418.html)
+4. Netty的使用与服务器Hello world
 
-# nio学习
+参考资料
 
-nio是新的io包 non-blocking IO，主要提供了channels和buffer，非阻塞模式，selector等。
+- 《Netty实战》
+- 《Netty权威指南》
+- [聊聊同步、异步、阻塞与非阻塞](https://www.jianshu.com/p/aed6067eeac9)
+- [聊聊Linux 五种IO模型](https://www.jianshu.com/p/486b0965c296)
+- [5种网络IO模型（有图，很清楚）](https://www.cnblogs.com/findumars/p/6361627.html)
+- [emoji地址](https://emojipedia.org/hundred-points-symbol/)
 
-目的：
-
-- 基于Buffer缓存数据，更高效
-- Channel去除了流的方向性，读写更随意
-- Selector模式提供了单线程处理多个IO的能力，便于实现百万级并发的服务器程序
-- 提供非阻塞模式，使得程序运行的更高效
-
-![](https://github.com/xinghalo/JDK-Learning/blob/master/img/nio的selector.jpg)
-
-
-
-- 参考《并发编程网》：http://ifeve.com/java-nio-all/
-
-# 网络模型
-
-- 聊聊同步、异步、阻塞与非阻塞：https://www.jianshu.com/p/aed6067eeac9
-- 聊聊Linux 五种IO模型：https://www.jianshu.com/p/486b0965c296
-- 5种网络IO模型（有图，很清楚）：https://www.cnblogs.com/findumars/p/6361627.html
-
-# netty学习
-
-## 《Netty实战》
-
-![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180227-084552.jpg)
-
-## 《Netty权威指南》
-
-![](https://github.com/xinghalo/JDK-Learning/blob/master/img/Jietu20180315-082645.jpg)
-
+#### Zookeeper
 
