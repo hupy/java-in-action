@@ -14,7 +14,7 @@
 1. [网络IO的基本知识与概念](http://www.cnblogs.com/xing901022/p/8659436.html)
 2. [普通IO以及BIO服务器](http://www.cnblogs.com/xing901022/p/8666147.html)
 3. [NIO的使用与服务器Hello world](http://www.cnblogs.com/xing901022/p/8672418.html)
-4. Netty的使用与服务器Hello world
+4. [Netty的使用与服务器Hello world](http://www.cnblogs.com/xing901022/p/8678869.html)
 
 参考资料
 
