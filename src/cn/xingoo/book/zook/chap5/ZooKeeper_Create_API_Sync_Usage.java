@@ -16,14 +16,14 @@ public class ZooKeeper_Create_API_Sync_Usage implements Watcher{
 
         connectedSemaphore.await();
 
-        String path1 = zooKeeper.create("/zk-test-ephemeral-",
-                "".getBytes(),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE,
-                CreateMode.EPHEMERAL);
+//        String path1 = zooKeeper.create("/zk-test-ephemeral-",
+//                "".getBytes(),
+//                ZooDefs.Ids.OPEN_ACL_UNSAFE,
+//                CreateMode.EPHEMERAL);
 
-        System.out.println("Success create znode: "+path1);
+//        System.out.println("Success create znode: "+path1);
 
-        String path2 = zooKeeper.create("/zk-test-ephemeral-",
+        String path2 = zooKeeper.create("/test/ephemeral-",
                 "".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL_SEQUENTIAL);
